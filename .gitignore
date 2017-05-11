@@ -17,6 +17,8 @@ Desktop.ini
 node_modules
 *.log
 *.gz
+public.lib
+.bower-*/
 
 
 # Coveralls

@@ -1,0 +1,14 @@
+{
+  "name": "todo",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Xinhuan Shu <vlanxin@hotmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/NicoleShu/express-todo",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7"
+  }
+}
