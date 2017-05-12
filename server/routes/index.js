@@ -13,9 +13,21 @@ var homeCtrl = require('../controllers/main');
 // GET home page.
 router.get('/', homeCtrl.homeController);
 
-var returnTodo = require('../controllers/returnTodo');
-router.get('')
-
+var returnCtrl = require('../controllers/returnTodos');
+router.get('/todos', returnCtrl.returnController);
+// router.get('/todos', function(req, res, next) {
+  // res.render('index', { title: 'Express' });
+  // console.log(req);
+  // Todo
+  //   .find()
+  //   .sort('-upadate_at')
+  //   .exec(function(err, todos){
+  //     if(err){
+  //       res.send(err);
+  //     }
+  //     res.json(todos);
+  //   });
+// });
 
 
 module.exports = router;

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href='lib/bootstrap/dist/css/bootstrap.min.css'/>
+  <title>Todo-list</title>
+  <script src="lib/angular/angular.min.js"></script>
+</head>
+
+<body ng-app="TodoApp">
+  <h1>Todo List</h1>
+
+  <div class="list" ng-controller="showCtrl">
+    <div ng-repeat="todo in todos">
+      <input type="checkbox"></input>
+      {{todo.content}}
+
+    </div>
+
+  </div>
+
+  <script src="module.js"></script>
+  <script src="services/TodoService.js"></script>
+  <script src="controllers/showCtrl.js"></script>
+
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
