@@ -12,13 +12,6 @@
 <body ng-app="TodoApp">
   <h1>Todo List</h1>
 
-  <div ng-controller="createCtrl">
-    <form ng-submit="createTodo()">
-      <input type="text" ng-model="newTodo" placeholder="Add a todo item">
-      <input type="submit" value="create">
-    </form>
-  </div>
-
   <div class="list" ng-controller="showCtrl">
     <div ng-repeat="todo in todos">
       <input type="checkbox"></input>
@@ -31,7 +24,6 @@
   <script src="module.js"></script>
   <script src="services/TodoService.js"></script>
   <script src="controllers/showCtrl.js"></script>
-  <script src="controllers/createCtrl.js"></script>
 
   <script src="lib/jquery/dist/jquery.min.js"></script>
   <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>

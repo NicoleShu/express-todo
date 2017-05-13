@@ -13,6 +13,7 @@ var homeCtrl = require('../controllers/main');
 // GET home page.
 router.get('/', homeCtrl.homeController);
 
+//API: get all todos
 var returnCtrl = require('../controllers/returnTodos');
 router.get('/todos', returnCtrl.returnController);
 // router.get('/todos', function(req, res, next) {
@@ -28,6 +29,10 @@ router.get('/todos', returnCtrl.returnController);
   //     res.json(todos);
   //   });
 // });
+
+//API: create a new todo
+var createCtrl = require('../controllers/createTodo');
+router.post('/todo', createCtrl.createController);
 
 
 module.exports = router;
