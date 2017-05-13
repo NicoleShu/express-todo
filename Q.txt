@@ -1,0 +1,7 @@
+平级controller之间数据传递
+    $scope.$$nextSibling.    //这个方法有点粗暴
+    service待实现
+
+
+server的views放到Client的views里
+

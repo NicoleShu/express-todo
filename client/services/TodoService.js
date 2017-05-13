@@ -13,8 +13,12 @@ app.factory('TodoService',['$http', function($http){
       data: todo
     });
   };
+  var _deleteTodo = function(id){
+    return $http.delete('/todo' + id);
+  }
   return {
     todoList: _getTodoList,
-    createTodo: _createTodo
+    createTodo: _createTodo,
+    deleteTodo: _deleteTodo
   };
 }]);

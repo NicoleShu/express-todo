@@ -34,5 +34,8 @@ router.get('/todos', returnCtrl.returnController);
 var createCtrl = require('../controllers/createTodo');
 router.post('/todo', createCtrl.createController);
 
+var deleteCtrl = require('../controllers/deleteTodo');
+router.delete('/todo:id', deleteCtrl.deleteController);
+
 
 module.exports = router;

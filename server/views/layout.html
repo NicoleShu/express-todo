@@ -21,7 +21,7 @@
 
   <div class="list" ng-controller="showCtrl">
     <div ng-repeat="todo in todos">
-      <input type="checkbox"></input>
+      <input type="checkbox" ng-model="todo.done" ng-click="deleteTodo(todo._id)"></input>
       {{todo.content}}
 
     </div>
