@@ -1,6 +1,7 @@
 "use strict";
 
 app.factory('TodoService',['$http', function($http){
+  // var todos;
   var _getTodoList = function(){
     return $http.get('/todos');
   };

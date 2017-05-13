@@ -10,6 +10,7 @@ var TodoSchema = new Schema({
 var TodoModel = mongoose.model('Todo', TodoSchema);
 module.exports = TodoModel;
 //connect
+mongoose.Promise = global.Promise; 
 mongoose.connect('mongodb://localhost:27017/express-todo');    //此处的express-todo是mongodb数据库的名字，所以你需要先创建这个数据库
 /**
   * 连接成功

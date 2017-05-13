@@ -1,12 +1,12 @@
 var Todo = require('../models/db');
 module.exports.createController = function(req, res, next){
-  console.log(req);
+  // console.log(req.body.content);
   var TodoItem = new Todo({
-    content: req.content,
+    content: req.body.content,
     update_at: new Date()
   });
-  console.log(TodoItem);
-  TodoItem.save(function(err, todo, count){
+  // console.log(TodoItem);
+  TodoItem.save(function(err, todos, count){
     // console.log(todo);
     if(err){
       err.send(err);
@@ -17,6 +17,8 @@ module.exports.createController = function(req, res, next){
         if(err){
           res.send(err);
         }
+        console.log(todos);
+        // console.log(count);
         res.json(todos);
       });
   });
